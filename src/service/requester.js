@@ -19,8 +19,16 @@ async function requester(method,url,data){
         const response = await fetch(url, option);
         if (!response.ok) {
             const err = await response.json();
-            throw new Error(err);
+            console.error(err.message);
+
+         if (err.message == "Invalid access token") {
+          clearUserData();
+          }
+          throw err;
+
         }
+       
+
 
         if (response.status === 204) {
             return response;

@@ -1,4 +1,4 @@
-import { html, render } from "../../lib.js";
+import { html, render } from "../lib.js";
 import { userUtils } from "./userUtils.js";
 
 const navRoot = document.querySelector() // TO DO check nav container 
